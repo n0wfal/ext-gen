@@ -6,6 +6,7 @@ const npmScope = '@sencha'
 const appMigrate = require('./appMigrate.js')
 const movetolatest = require('./movetolatest.js')
 const os = require('os');
+const path = require('path');
 const { spawn } = require("child_process")
 require('./XTemplate/js')
 
@@ -514,7 +515,7 @@ function stepHomepageURL() {
 }
 
 async function gitClone(repoUrl, branch = false) {
-  const repoPath = `${os.tmpdir}/${new Date().getTime()}`;
+  const repoPath = path.join(os.tmpdir, `${new Date().getTime()}`);
   return new Promise((resolve, reject) => {
     let args = [
       'clone',
