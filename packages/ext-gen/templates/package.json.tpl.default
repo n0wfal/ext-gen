@@ -42,7 +42,7 @@
     "@sencha/ext-classic": "~7.5.0",
     "@sencha/ext-classic-{classicTheme}": "~7.5.0",</tpl>
     "@sencha/ext": "~7.5.0",
-    "@sencha/ext-charts": "7.5.0"
+    "@sencha/ext-charts": "~7.5.0"
   },
   "devDependencies": {
     "@sencha/ext-webpack-plugin": "~7.5.0",
