@@ -668,7 +668,12 @@ async function stepCreate() {
   var frameworkPkg = require(frameworkPath);
   var cmdPkg = require(cmdPath);
   var cmdVersion = cmdPkg.version_full
-  var frameworkVersion = (frameworkPkg?.sencha?.version ? frameworkPkg?.sencha?.version : "7.5.0");
+  
+  if (frameworkPkg && frameworkPkg.sencha && frameworkPkg.sencha.version) {
+    var frameworkVersion = frameworkPkg.sencha.version;
+  } else {
+    var frameworkVersion = "7.5.0";
+  }
 
   var generateApp = require(`../ext-build-generate-app/generateApp.js`)
   var options = {
