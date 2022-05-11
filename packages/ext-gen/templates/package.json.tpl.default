@@ -36,7 +36,6 @@
   },
 </tpl>
   "dependencies": {
-    <tpl if="modern == true">
     "@sencha/ext-modern": "~7.5.0",
     "@sencha/ext-modern-{modernTheme}": "~7.5.0",</tpl><tpl if="classic == true">
     "@sencha/ext-classic": "~7.5.0",
